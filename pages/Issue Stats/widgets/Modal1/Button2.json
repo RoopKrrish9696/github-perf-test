@@ -1,0 +1,23 @@
+{
+    "labelTextSize": "0.875rem",
+    "boxShadow": "none",
+    "widgetName": "Button2",
+    "rightColumn": 48,
+    "isDefaultClickDisabled": true,
+    "buttonColor": "#03B365",
+    "widgetId": "u84g7m7nwx",
+    "topRow": 52,
+    "bottomRow": 56,
+    "isVisible": true,
+    "type": "BUTTON_WIDGET",
+    "version": 1,
+    "recaptchaType": "V3",
+    "parentId": "c4hhvcrfmp",
+    "isLoading": false,
+    "leftColumn": 36,
+    "dynamicBindingPathList": [],
+    "borderRadius": "0px",
+    "buttonVariant": "SECONDARY",
+    "text": "Cancel",
+    "isDisabled": false
+}

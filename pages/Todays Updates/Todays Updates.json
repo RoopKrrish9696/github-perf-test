@@ -1,0 +1,115 @@
+{
+  "unpublishedPage": {
+    "name": "Todays Updates",
+    "slug": "todays-updates",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1885,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 2060,
+          "containerStyle": "none",
+          "snapRows": 236,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 89,
+          "minHeight": 1970,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "leftColumn": 0,
+          "dynamicBindingPathList": []
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Todays Updates_fetchCriticalIssues",
+              "name": "fetchCriticalIssues",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Todays Updates_fetchRegressedIssues",
+              "name": "fetchRegressedIssues",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Todays Updates_fetchReleaseBlockers",
+              "name": "fetchReleaseBlockers",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Todays Updates_fetchStandup",
+              "name": "fetchStandup",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "DatePicker1.formattedDate",
+                "Select1.selectedOptionValue ? \"and pod = '\" + Select1.selectedOptionValue + \"'\" : \"\"",
+                "Input1.text ? \"and name ~* '\" + Input1.text + \"'\" : \"\""
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Todays Updates_fetchCurrentRelease",
+              "name": "fetchCurrentRelease",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Todays Updates_get_force_roster",
+              "name": "get_force_roster",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Todays Updates_fetchTodaysIssues",
+              "name": "fetchTodaysIssues",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Text33.text",
+                "Select2.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Todays Updates",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "gitSyncId": "64671326043cb8668c6daa02_64671326043cb8668c6daa08"
+}

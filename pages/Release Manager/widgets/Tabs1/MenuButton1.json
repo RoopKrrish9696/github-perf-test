@@ -1,0 +1,137 @@
+{
+    "isCompact": false,
+    "boxShadow": "none",
+    "widgetName": "MenuButton1",
+    "dynamicPropertyPathList": [
+        {"key": "menuItems.menuItem3.isDisabled"},
+        {"key": "menuItems.menuItem97ztwi6dz4.isDisabled"},
+        {"key": "menuItems.menuItem2.isDisabled"},
+        {"key": "menuItems.menuItem3tm942geqh.isDisabled"},
+        {"key": "menuItems.menuItemzf9sdqgeoh.onClick"},
+        {"key": "menuItems.menuItemzf9sdqgeoh.isDisabled"},
+        {"key": "menuItems.menuItem9i98scrl2o.isDisabled"}
+    ],
+    "displayName": "Menu Button",
+    "iconSVG": "/static/media/icon.0341d17d.svg",
+    "topRow": 0,
+    "bottomRow": 4,
+    "parentRowSpace": 10,
+    "type": "MENU_BUTTON_WIDGET",
+    "hideCard": false,
+    "animateLoading": true,
+    "parentColumnSpace": 14.600341796875,
+    "dynamicTriggerPathList": [
+        {"key": "menuItems.menuItem1.onClick"},
+        {"key": "menuItems.menuItem2.onClick"},
+        {"key": "menuItems.menuItem97ztwi6dz4.onClick"},
+        {"key": "menuItems.menuItem3.onClick"},
+        {"key": "menuItems.menuItem3tm942geqh.onClick"},
+        {"key": "menuItems.menuItemzf9sdqgeoh.onClick"},
+        {"key": "menuItems.menuItem9i98scrl2o.onClick"},
+        {"key": "menuItems.menuItem4kevdvxr6b.onClick"}
+    ],
+    "leftColumn": 39,
+    "dynamicBindingPathList": [
+        {"key": "menuItems.menuItem3tm942geqh.isDisabled"},
+        {"key": "menuItems.menuItem97ztwi6dz4.isDisabled"},
+        {"key": "menuItems.menuItem3.isDisabled"},
+        {"key": "menuItems.menuItem2.isDisabled"},
+        {"key": "menuItems.menuItemzf9sdqgeoh.isDisabled"},
+        {"key": "menuItems.menuItem9i98scrl2o.isDisabled"}
+    ],
+    "isDisabled": false,
+    "key": "2g1ivdz5fq",
+    "labelTextSize": "0.875rem",
+    "sourceDataKeys": [],
+    "rightColumn": 63,
+    "iconName": "caret-down",
+    "menuVariant": "PRIMARY",
+    "widgetId": "zzx45muzwo",
+    "menuItems": {
+        "menuItem4kevdvxr6b": {
+            "onClick": "{{showModal('UpgradeReleaseModal')}}",
+            "widgetId": "sgvndlkqwx",
+            "index": 7,
+            "id": "menuItem4kevdvxr6b",
+            "label": "Upgrade release",
+            "isDisabled": false,
+            "isVisible": true
+        },
+        "menuItem9i98scrl2o": {
+            "onClick": "{{showModal('TaggingNotesModal')}}",
+            "widgetId": "8t9mb91ynf",
+            "index": 6,
+            "id": "menuItem9i98scrl2o",
+            "label": "Add Tagging notes",
+            "isDisabled": "{{Table1.selectedRow.status !== \"tagging_complete\"}}",
+            "isVisible": true
+        },
+        "menuItem1": {
+            "onClick": "{{showModal('Modal2')}}",
+            "widgetId": "",
+            "index": 0,
+            "iconAlign": "right",
+            "label": "Elect members",
+            "id": "menuItem1",
+            "isVisible": true,
+            "isDisabled": false
+        },
+        "menuItemzf9sdqgeoh": {
+            "onClick": "{{draft_notes_reviewed.run(() =>{ showAlert('Thank you for updating the status, the team has been notified','success');\n\t\t\t\t\t\t\t\t\t\t\t\t fetch_releases.run(() => intimateOnSlack.run(), () => {})}, () => {})}}",
+            "widgetId": "dbb25r9kz4",
+            "index": 3,
+            "id": "menuItemzf9sdqgeoh",
+            "label": "Draft notes reviewed",
+            "isDisabled": "{{Table1.selectedRow.status != 'promotion_complete' || Table1.selectedRow.draft_notes_reviewed}}",
+            "isVisible": true
+        },
+        "menuItem3": {
+            "onClick": "{{showModal('Modal3Copy')}}",
+            "widgetId": "",
+            "index": 2,
+            "label": "Complete promotion",
+            "id": "menuItem3",
+            "isVisible": true,
+            "isDisabled": "{{Table1.selectedRow.status != 'regression_end'}}"
+        },
+        "menuItem2": {
+            "onClick": "{{showModal('Modal3')}}",
+            "widgetId": "",
+            "index": 1,
+            "iconAlign": "left",
+            "label": "End regression",
+            "id": "menuItem2",
+            "isVisible": true,
+            "isDisabled": "{{Table1.selectedRow.status != 'initiated'}}"
+        },
+        "menuItem97ztwi6dz4": {
+            "onClick": "{{showModal('TagReleaseModal')}}",
+            "widgetId": "msee4r6183",
+            "index": 4,
+            "id": "menuItem97ztwi6dz4",
+            "label": "Release Tagged",
+            "isDisabled": "{{Table1.selectedRow.status != 'promotion_complete'}}",
+            "isVisible": true
+        },
+        "menuItem3tm942geqh": {
+            "onClick": "{{showModal('ReleaseFailedModal')}}",
+            "widgetId": "ve8yh99ung",
+            "index": 5,
+            "id": "menuItem3tm942geqh",
+            "label": "Release Failed",
+            "isDisabled": "{{Table1.selectedRow.status == 'tagging_complete'}}",
+            "isVisible": true
+        }
+    },
+    "isVisible": true,
+    "label": "Actions",
+    "version": 1,
+    "parentId": "m87xf4m11k",
+    "renderMode": "CANVAS",
+    "isLoading": false,
+    "borderRadius": "0.375rem",
+    "menuColor": "#f4f4f5",
+    "menuItemsSource": "STATIC",
+    "iconAlign": "right",
+    "placement": "BETWEEN"
+}

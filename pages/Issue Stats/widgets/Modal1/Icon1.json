@@ -1,0 +1,23 @@
+{
+    "labelTextSize": "0.875rem",
+    "isRequired": false,
+    "boxShadow": "none",
+    "widgetName": "Icon1",
+    "rightColumn": 64,
+    "onClick": "{{closeModal('Modal1')}}",
+    "iconName": "cross",
+    "buttonColor": "#2E3D49",
+    "widgetId": "9tm6x2j2g8",
+    "topRow": 0,
+    "bottomRow": 4,
+    "isVisible": true,
+    "type": "ICON_BUTTON_WIDGET",
+    "version": 1,
+    "parentId": "c4hhvcrfmp",
+    "isLoading": false,
+    "leftColumn": 56,
+    "dynamicBindingPathList": [],
+    "borderRadius": "0px",
+    "buttonVariant": "TERTIARY",
+    "iconSize": 24
+}

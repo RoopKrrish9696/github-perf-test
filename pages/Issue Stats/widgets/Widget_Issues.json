@@ -1,0 +1,131 @@
+{
+    "boxShadow": "none",
+    "widgetName": "Widget_Issues",
+    "allowScroll": false,
+    "dynamicPropertyPathList": [{"key": "onDataPointClick"}],
+    "topRow": 48,
+    "bottomRow": 96,
+    "parentRowSpace": 40,
+    "type": "CHART_WIDGET",
+    "chartData": {"98tipygcdk": {
+        "data": "{{\nfunction() {\n  const countMap = {};\n  const widgetLabels = fetchLabels.data.filter((label) => {  \n    return label.name.toLowerCase().includes(\"widget\") && label.name !== \"Widgets\" \n  });\n  const allWidgetIssues = [...(fetchWidgetIssues1).data, ...fetchWidgetIssues2.data];\nwidgetLabels.forEach((widgetLabel) => {  \n  allWidgetIssues.forEach((issue) => { \n  const foundIssue =  issue.labels.find((label) => label.name == widgetLabel.name );\n  if (foundIssue) {\n    if (countMap[widgetLabel.name] !== undefined)\n      countMap[widgetLabel.name] += 1; \n    else countMap[widgetLabel.name] = 1;\n  }\n });\n});\nreturn Object.keys(countMap).map((key) => { return { x: key, y: countMap[key] } });\n }();\n}}",
+        "seriesName": ""
+    }},
+    "parentColumnSpace": 74,
+    "dynamicTriggerPathList": [{"key": "onDataPointClick"}],
+    "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+    "leftColumn": 0,
+    "dynamicBindingPathList": [
+        {"key": "chartData.98tipygcdk.data"},
+        {"key": "customFusionChartConfig"},
+        {"key": "accentColor"},
+        {"key": "fontFamily"}
+    ],
+    "customFusionChartConfig": "{{\nfunction() {\n  const countMap = {};\n  const widgetLabels = fetchLabels.data.filter((label) => {  \n    return label.name.toLowerCase().includes(\"widget\") && label.name !== \"Widgets\" \n  });\n  const allWidgetIssues = [...fetchWidgetIssues1.data, ...fetchWidgetIssues2.data];\nwidgetLabels.forEach((widgetLabel) => {  \n  allWidgetIssues.forEach((issue) => {\n    let isBug = false;\n    let isFeature = false;\n    let isWidget = false;\n  const foundBug =  issue.labels.map((label) => {\n    if (label.name == widgetLabel.name)\n      isWidget = true;\n    if (label.name === \"Bug\") \n      isBug = true;\n    if (label.name === \"Enhancement\")\n      isFeature = true;\n  } );\n  if (isWidget && (isBug || isFeature)) {\n    if (countMap[widgetLabel.name] !== undefined) {\n      if (isBug) {\n        countMap[widgetLabel.name].bug +=1;\n      } else {\n        countMap[widgetLabel.name].feature +=1;\n      } \n    } else  {\n      if (isBug) {\n        countMap[widgetLabel.name] = {\n          bug: 1,\n          feature: 0\n        }\n      } else {\n        countMap[widgetLabel.name] = {\n          bug: 0,\n          feature: 1\n        }\n      }\n    }\n  }\n });\n});\nconst chartData = {\n\"type\": \"scrollstackedcolumn2d\",\n\"dataSource\": {\n    \"chart\": {\n        \"xaxisname\": \"Type\",\n        \"yaxisname\": \"No. Issues\",\n        \"numberprefix\": \"#\",\n        \"lineThickness\": \"3\",\n        \"flatScrollBars\": \"1\",\n        \"scrollheight\": \"10\",\n        \"theme\": \"fusion\"\n    },\n    \"categories\": [\n        {\n            \"category\": Object.keys(countMap).map((label) => { return { label: label } }) \n        }\n    ],\n    \"dataset\": [\n        {\n            \"seriesname\": \"Features\",\n            \"color\": \"4287f5\",\n            \"data\": Object.values(countMap).map((value) => { return { value: value.feature } })\n        },\n        {\n            \"seriesname\": \"Bugs\",\n            \"color\": \"e08916\",\n            \"data\": Object.values(countMap).map((value) => { return { value: value.bug } })\n        }\n    ]\n}\n};\n\nreturn chartData;\n }();\n}}",
+    "onDataPointClick": "{{navigateTo('https://github.com/appsmithorg/appsmith/issues?q=is%3Aopen+is%3Aissue+label%3A'+'\"'+Widget_Issues.selectedDataPoint.x.replace(\" \", \"+\")+'\"',{}, 'NEW_WINDOW')}}",
+    "customEChartConfig": {
+        "yAxis": [{"type": "value"}],
+        "xAxis": [{"type": "category"}],
+        "legend": {
+            "top": 40,
+            "type": "scroll"
+        },
+        "grid": {
+            "top": 100,
+            "left": 15,
+            "bottom": 30,
+            "right": 15,
+            "containLabel": true
+        },
+        "series": [
+            {
+                "stack": "Search Engine",
+                "type": "bar"
+            },
+            {
+                "stack": "Search Engine",
+                "type": "bar"
+            },
+            {
+                "stack": "Search Engine",
+                "type": "bar"
+            }
+        ],
+        "tooltip": {
+            "axisPointer": {"type": "shadow"},
+            "trigger": "axis"
+        },
+        "title": {
+            "left": "center",
+            "text": "Search Engine Usage",
+            "textStyle": {
+                "overflow": "truncate",
+                "width": 200
+            }
+        },
+        "dataset": {"source": [
+            [
+                "Day",
+                "Baidu",
+                "Google",
+                "Bing"
+            ],
+            [
+                "Mon",
+                620,
+                120,
+                60
+            ],
+            [
+                "Tue",
+                732,
+                132,
+                72
+            ],
+            [
+                "Wed",
+                701,
+                101,
+                71
+            ],
+            [
+                "Thu",
+                734,
+                134,
+                74
+            ],
+            [
+                "Fri",
+                1090,
+                290,
+                190
+            ],
+            [
+                "Sat",
+                1130,
+                230,
+                130
+            ],
+            [
+                "Sun",
+                1120,
+                220,
+                110
+            ]
+        ]}
+    },
+    "showDataPointLabel": false,
+    "labelTextSize": "0.875rem",
+    "rightColumn": 64,
+    "widgetId": "tdvwwq5pe0",
+    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+    "isVisible": true,
+    "version": 1,
+    "parentId": "0",
+    "isLoading": false,
+    "yAxisName": "Issues",
+    "chartName": "Widget Issues",
+    "borderRadius": "0px",
+    "xAxisName": "Widgets",
+    "chartType": "CUSTOM_FUSION_CHART"
+}

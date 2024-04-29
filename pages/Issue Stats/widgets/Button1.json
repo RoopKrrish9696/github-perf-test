@@ -1,0 +1,31 @@
+{
+    "boxShadow": "none",
+    "widgetName": "Button1",
+    "onClick": "{{ [\"UI Building\", \"Actions\", \"JS\", \"Autocomplete\", \"Widgets\", \"Pages\", \"Property Pane\", \"API Pane\", \"Query Editor\", \"Datasources\", \"ACL\", \"Login / Signup\", \"Telemetry\", \"Deployment\"].forEach((label, index) => { fetchBugIssues.run((res, param) => {\n  let CritLen = 0;\n\tlet HighLen = 0;\n\tlet LowLen = 0;\n\tlet NoPriLen = 0;\nres.map((issue) => {\n  let noPriVal = 1;\n issue.labels.map((label) => { \n   if (label.name === \"Critical\") {\n      CritLen++;\n      noPriVal=0;\n    } else if (label.name ===\"High\") {\n      HighLen++; \n      noPriVal=0;\n    } else if (label.name === \"Low\") {\n      LowLen++; \n      noPriVal=0;\n    }\n});\n\tNoPriLen += noPriVal;\n});\nstoreValue(\"Bug-\"+param.index + \"\", { x: param.label, critY: CritLen, highY: HighLen, lowY: LowLen, noPriY: NoPriLen});\n}, undefined, { label: label, index: index });\nfetchFeatureIssues.run((res, param) => {\n\tlet CritLen = 0;\n\tlet HighLen = 0;\n\tlet LowLen = 0;\n\tlet NoPriLen = 0;\nres.map((issue) => {\n  let noPriVal = 1;\n issue.labels.map((label) => { \n   if (label.name === \"Critical\") {\n      CritLen++;\n      noPriVal=0;\n    } else if (label.name ===\"High\") {\n      HighLen++; \n      noPriVal=0;\n    } else if (label.name === \"Low\") {\n      LowLen++; \n      noPriVal=0;\n    }\n });\n\tNoPriLen += noPriVal;\n});\nstoreValue(\"Feature-\"+param.index, { x: param.label, critY: CritLen, highY: HighLen, lowY: LowLen, noPriY: NoPriLen});}, undefined, { label: label, index: index });\n });  }}",
+    "dynamicPropertyPathList": [
+        {"key": "onClick"},
+        {"key": "isVisible"}
+    ],
+    "buttonColor": "#03B365",
+    "topRow": 0,
+    "bottomRow": 4,
+    "parentRowSpace": 40,
+    "type": "BUTTON_WIDGET",
+    "parentColumnSpace": 74,
+    "dynamicTriggerPathList": [{"key": "onClick"}],
+    "leftColumn": 56,
+    "dynamicBindingPathList": [],
+    "text": "Refresh",
+    "isDisabled": false,
+    "labelTextSize": "0.875rem",
+    "rightColumn": 64,
+    "isDefaultClickDisabled": true,
+    "widgetId": "zdseojq59f",
+    "isVisible": "true",
+    "version": 1,
+    "recaptchaType": "V3",
+    "parentId": "0",
+    "isLoading": false,
+    "borderRadius": "0px",
+    "buttonVariant": "PRIMARY"
+}

@@ -1,0 +1,23 @@
+{
+    "labelTextSize": "0.875rem",
+    "boxShadow": "none",
+    "widgetName": "Button3",
+    "rightColumn": 64,
+    "isDefaultClickDisabled": true,
+    "buttonColor": "#03B365",
+    "widgetId": "93ah83a6j5",
+    "topRow": 52,
+    "bottomRow": 56,
+    "isVisible": true,
+    "type": "BUTTON_WIDGET",
+    "version": 1,
+    "recaptchaType": "V3",
+    "parentId": "c4hhvcrfmp",
+    "isLoading": false,
+    "leftColumn": 48,
+    "dynamicBindingPathList": [],
+    "borderRadius": "0px",
+    "buttonVariant": "PRIMARY",
+    "text": "Confirm",
+    "isDisabled": false
+}

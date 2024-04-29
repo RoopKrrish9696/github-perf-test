@@ -1,0 +1,44 @@
+{
+    "boxShadow": "none",
+    "widgetName": "IconButton4",
+    "buttonColor": "{{Table1.selectedRow.draft_notes_reviewed ? \"#22c55e\" : \"#e84d08\"}}",
+    "dynamicPropertyPathList": [
+        {"key": "isVisible"},
+        {"key": "iconName"},
+        {"key": "buttonColor"}
+    ],
+    "displayName": "Icon Button",
+    "iconSVG": "/static/media/icon.1a0c634ac75f9fa6b6ae7a8df882a3ba.svg",
+    "searchTags": [
+        "click",
+        "submit"
+    ],
+    "topRow": 23,
+    "bottomRow": 27,
+    "tooltip": "{{Table1.selectedRow.draft_notes_reviewed ? \"The draft has been verified. We are ready to tag!\" : \"Draft note is awaiting verification\"}}",
+    "parentRowSpace": 10,
+    "type": "ICON_BUTTON_WIDGET",
+    "hideCard": false,
+    "animateLoading": true,
+    "parentColumnSpace": 7.736328125,
+    "dynamicTriggerPathList": [],
+    "leftColumn": 54,
+    "dynamicBindingPathList": [
+        {"key": "iconName"},
+        {"key": "buttonColor"},
+        {"key": "tooltip"}
+    ],
+    "isDisabled": false,
+    "key": "o6nogteicf",
+    "isDeprecated": false,
+    "rightColumn": 58,
+    "iconName": "{{Table1.selectedRow.draft_notes_reviewed ? \"tick\" : \"cross\"}}",
+    "widgetId": "ffuwz3svoq",
+    "isVisible": "",
+    "version": 1,
+    "parentId": "m87xf4m11k",
+    "renderMode": "CANVAS",
+    "isLoading": false,
+    "borderRadius": "1.5rem",
+    "buttonVariant": "TERTIARY"
+}
