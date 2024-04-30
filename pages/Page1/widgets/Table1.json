@@ -14,7 +14,7 @@
         {"key": "boxShadow"}
     ],
     "needsHeightForContent": true,
-    "leftColumn": 37,
+    "leftColumn": 48,
     "delimiter": ",",
     "defaultSelectedRowIndex": 0,
     "flexVerticalAlignment": "start",
@@ -74,7 +74,7 @@
     "key": "i95sqvoi5i",
     "canFreezeColumn": true,
     "isDeprecated": false,
-    "rightColumn": 64,
+    "rightColumn": 50,
     "textSize": "0.875rem",
     "thumbnailSVG": "https://release-appcdn.appsmith.com/static/media/thumbnail.d0492f06681daa69baf92b07d3829dfc.svg",
     "widgetId": "edvztnk0ju",
